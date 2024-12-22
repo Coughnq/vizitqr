@@ -48,12 +48,12 @@
                 <div class="form-group">
                     <label for="themeColor">Theme Color</label>
                     <div class="color-picker-wrapper">
-                        <input type="color" id="themeColor" name="themeColor" value="#2563eb">
+                        <input type="color" id="themeColor" name="themeColor" value="#1a1a1a">
                         <input type="text" id="themeColorHex" 
                                class="color-hex" 
-                               value="#2563eb" 
+                               value="#1a1a1a" 
                                pattern="^#([A-Fa-f0-9]{6})$"
-                               title="Hex color code (e.g., #2563eb)">
+                               title="Hex color code (e.g., #1a1a1a)">
                     </div>
                 </div>
                 <button type="submit">Generate QR Code</button>
@@ -90,7 +90,17 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 VizitQR. Create and share digital business cards instantly.</p>
+        <div class="footer-content">
+            <div class="branding">
+                <p class="logo">VizitQR™</p>
+                <p class="copyright">&copy; 2024 <a href="https://intelliquinte.com">Intelliquinte L.L.C.</a> All rights reserved.</p>
+            </div>
+            <div class="legal-links">
+                <a href="https://v.intelliquinte.com/privacy">Privacy Policy</a>
+                <span class="separator">•</span>
+                <a href="https://v.intelliquinte.com/terms">Terms of Service</a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/urlParser.js"></script>

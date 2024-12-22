@@ -1,6 +1,6 @@
 :root {
-    --primary-color: #2563eb;
-    --primary-light: #60a5fa;
+    --primary-color: #1a1a1a;
+    --primary-light: #333333;
     --theme-color: var(--primary-color);
     --theme-light: var(--primary-light);
     --background-color: #ffffff;
@@ -15,7 +15,7 @@
 [data-theme="dark"] {
     --background-color: #111827;
     --text-color: #f9fafb;
-    --card-background: #1f2937;
+    --card-background: #1a1a1a;
     --border-color: #374151;
     --shadow-color: rgba(0, 0, 0, 0.3);
 }
@@ -378,4 +378,85 @@ input[type="color"]::-webkit-color-swatch {
 .color-hex {
     width: 100px !important;
     text-transform: uppercase;
+} 
+
+/* Footer Styles */
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.branding {
+    text-align: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.copyright {
+    font-size: 0.875rem;
+    color: #666666;
+}
+
+.copyright a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-weight: 500;
+}
+
+.copyright a:hover {
+    color: var(--primary-color);
+}
+
+.legal-links {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.legal-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    transition: color 0.2s;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.legal-links a:hover {
+    color: var(--primary-color);
+}
+
+.legal-links a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.legal-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.separator {
+    color: #666666;
 } 

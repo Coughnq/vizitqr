@@ -123,7 +123,6 @@ class App {
     }
 
     generateQRCode() {
-        // Get the base viewer URL - replace with your actual viewer URL
         const viewerUrl = 'https://v.intelliquinte.com';
         const params = URLParser.createParameterString(this.getFormData());
         const fullUrl = `${viewerUrl}?${params}`;

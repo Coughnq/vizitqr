@@ -74,7 +74,7 @@ class VCardFormatter {
             email: "john@example.com",
             phone: "+1 (234) 567-890",
             website: "https://example.com",
-            themeColor: "#2563eb"
+            themeColor: "#1a1a1a"
         });
     }
 

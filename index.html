@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="VizitQR - Generate and share digital business cards using QR codes">
+    <title>VizitQR - Digital Business Cards</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="assets/logo.svg" alt="VizitQR Logo" class="logo">
+            <h1>VizitQR</h1>
+        </div>
+        <nav>
+            <button id="themeToggle">Toggle Theme</button>
+            <button id="createNew">Create vCard</button>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Form Section -->
+        <section id="cardCreator" class="hidden">
+            <h2>Create Your Digital Business Card</h2>
+            <form id="vCardForm">
+                <div class="form-group">
+                    <label for="name">Full Name*</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="title">Job Title</label>
+                    <input type="text" id="title" name="title">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="website">Website</label>
+                    <input type="url" id="website" name="website">
+                </div>
+                <div class="form-group">
+                    <label for="themeColor">Theme Color</label>
+                    <div class="color-picker-wrapper">
+                        <input type="color" id="themeColor" name="themeColor" value="#2563eb">
+                        <input type="text" id="themeColorHex" 
+                               class="color-hex" 
+                               value="#2563eb" 
+                               pattern="^#([A-Fa-f0-9]{6})$"
+                               title="Hex color code (e.g., #2563eb)">
+                    </div>
+                </div>
+                <button type="submit">Generate QR Code</button>
+            </form>
+        </section>
+
+        <!-- Card Display Section -->
+        <section id="cardDisplay" class="preview-section">
+            <div class="preview-container">
+                <div class="preview-card">
+                    <h3>Digital Business Card</h3>
+                    <div id="vCardContainer"></div>
+                </div>
+                <div class="preview-qr">
+                    <h3>Scan QR Code</h3>
+                    <div id="qrCodeContainer"></div>
+                    <div class="actions">
+                        <button id="downloadQR" class="action-button">
+                            <span class="icon">⬇️</span>
+                            <span>Download QR</span>
+                        </button>
+                        <button id="downloadVCard" class="action-button">
+                            <span class="icon">📇</span>
+                            <span>Save Contact</span>
+                        </button>
+                        <button id="copyUrl" class="action-button">
+                            <span class="icon">📋</span>
+                            <span>Copy Link</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 VizitQR. Create and share digital business cards instantly.</p>
+    </footer>
+
+    <script src="js/urlParser.js"></script>
+    <script src="js/vCardFormatter.js"></script>
+    <script src="js/qrGenerator.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

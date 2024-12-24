@@ -11,7 +11,7 @@ class QRGenerator {
                 height: 300,
                 colorDark: "#000000",
                 colorLight: "#ffffff",
-                correctLevel: QRCode.CorrectLevel.M
+                correctLevel: QRCode.CorrectLevel.L
             });
         } catch (error) {
             console.error('QR Code generation failed:', error);
